@@ -1,0 +1,184 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Bootstrap Icons;
+    src: url(../fonts/bootstrap-icons.woff);
+    src: url(../fonts/bootstrap-icons.woff2);
+}
+:root {
+    --Cor_Fundo: #4703A6;
+    --Cor_Caixa: #0D0126;
+    --Cor_Texto: #fff;
+    --Cor_Caixa_Texto: #460273;
+    --Cor_Caixa_Texto_Ativa: #5D04D9;
+    --Cor_Botao: #2C0266;
+    --Cor_Botao_Final: #211836;
+    --Fonte_do_Titulo: 'Lucida Console', 'Console', monospace;
+    --Fonte_Icones: 'Bootstrap Icons';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Cor_Fundo);
+    color: var(--Cor_Texto);
+}
+.container {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    margin: 60px auto;
+    background-color: var(--Cor_Caixa);
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+}
+#extra_top {
+    display: flex;
+    flex-direction: row-reverse;
+}
+#extra_top i {
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    border-radius: 50%;
+}
+#bola_vermelha {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+#bola_amarela {
+    background-color: rgba(255, 255, 0, 0.3);
+}
+#bola_verde {
+    background-color: rgba(0, 128, 0, 0.3);
+}
+/* Não deixa o usuário bricar de copiar e colar */
+:is(h1, h2, label) {
+    user-select: none;
+}
+h1 {
+    font-family: var(--Fonte_do_Titulo);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 10px;  
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+input[type=number] {
+    width: 260px;
+    height: 25px;
+    margin: 10px 0;
+    border: 2px solid var(--Cor_Caixa_Texto);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    text-align: center;
+    color: var(--Cor_Texto);
+    transition: .3s ease-in-out;
+}
+input[type=number]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+input[type=number]:focus {
+    outline: none;
+    border-bottom-color: var(--Cor_Caixa_Texto_Ativa);
+}
+input[type=number]:out-of-range {
+    outline: none;
+    border-bottom-color: rgb(199, 0, 0);
+}
+input[type=number]:focus::placeholder {
+    color: transparent;
+}
+/* Esconde as setas do input */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance:textfield; 
+}
+h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 5%;
+}
+/* Botões */
+.botoes_cd,
+.botoes_np {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 0;
+}
+.botoes_cd i,
+.botoes_np i {
+    text-decoration: none;
+    text-transform: none;
+    font-style: normal;
+    font-family: var(--Fonte_Icones);
+}
+.botoes_cd input[type=radio],
+.botoes_np input[type=radio] {
+    display: none;
+}
+/* Ispirado na ideia de Ivan Grozdic */
+.botoes_cd label,
+.botoes_np label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: var(--Cor_Botao);
+    border-radius: 5px;
+    font-size: 14px;
+}
+.botoes_cd label:hover,
+.botoes_np label:hover {
+    background-color: var(--Cor_Caixa_Texto_Ativa);
+}
+.botoes_cd label i,
+.botoes_np label i{
+    margin-right: 5px;
+}
+.botoes_cd input[type=radio]:checked+label,
+.botoes_np input[type=radio]:checked+label {
+    background-color: var(--Cor_Caixa_Texto_Ativa);
+    border-color: var(--Cor_Caixa_Texto_Ativa);
+}
+.botoes_final {
+    display: flex;
+    margin-top: 6%;
+}
+.botoes_final input {
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin: 0 10px;
+    background-color: var(--Cor_Botao_Final);
+    color: var(--Cor_Texto);
+    cursor: pointer;
+}
+.botoes_final input:hover {
+    background-color: var(--Cor_Fundo);
+}

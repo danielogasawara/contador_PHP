@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <!-- CSS do Site -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div id="extra_top">
+                <i id="bola_vermelha"></i>
+                <i id="bola_amarela"></i>
+                <i id="bola_verde"></i>
+            </div>
+            <h1>Contador</h1>
+            <form action="contador.php" method="post">
+                <label for="numero1">De</label>
+                <input type="number" name="numero1" id="numero1" placeholder="Insira um número" min="-100" max="100" required>
+                <label for="numero2">Até</label>
+                <input type="number" name="numero2" id="numero2" placeholder="Insira um número" min="-100" max="100" required>
+                <h2>Negativo ou Positivo?</h2>
+                <div class="botoes_np">
+                    <input type="radio" name="np" id="Negativo" value="Negativo" required>
+                    <label for="Negativo">&ndash;
+                        Negativo</label>
+                    <input type="radio" name="np" id="Positivo" value="Positivo">
+                    <label for="Positivo">&#43; Positivo</label>
+                </div>
+                <h2>Crescente ou Decrescente?</h2>
+                <div class="botoes_cd">
+                    <input type="radio" name="cd" id="Crescente" value="Crescente" required>
+                    <label for="Crescente"><i>&#xF13A;</i>Crescente</label>
+                    <input type="radio" name="cd" id="Decrescente" value="Descrescente">
+                    <label for="Decrescente"><i>&#xF119;</i>Decrescente</label>
+                </div>
+                <div class="botoes_final">
+                    <input type="submit" value="Começar">
+                    <input type="reset" value="Resetar">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="assets/js/javascript.js"></script>
+</body>
+
+</html>
