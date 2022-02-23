@@ -25,22 +25,22 @@
             <h1>Contador</h1>
             <form action="contador.php" method="post">
                 <label for="numero1">De</label>
-                <input type="number" name="numero1" id="numero1" placeholder="Insira um número" min="-100" max="100" required>
+                <input type="number" name="numero1" id="numero1" placeholder="Insira um número" min="0" max="100" required>
                 <label for="numero2">Até</label>
-                <input type="number" name="numero2" id="numero2" placeholder="Insira um número" min="-100" max="100" required>
+                <input type="number" name="numero2" id="numero2" placeholder="Insira um número" min="1" max="100" required>
                 <h2>Negativo ou Positivo?</h2>
                 <div class="botoes_np">
                     <input type="radio" name="np" id="Negativo" value="Negativo" required>
                     <label for="Negativo">&ndash;
                         Negativo</label>
-                    <input type="radio" name="np" id="Positivo" value="Positivo">
+                    <input type="radio" name="np" id="Positivo" value="Positivo" checked>
                     <label for="Positivo">&#43; Positivo</label>
                 </div>
                 <h2>Crescente ou Decrescente?</h2>
                 <div class="botoes_cd">
-                    <input type="radio" name="cd" id="Crescente" value="Crescente" required>
+                    <input type="radio" name="cd" id="Crescente" value="Crescente" checked required>
                     <label for="Crescente"><i>&#xF13A;</i>Crescente</label>
-                    <input type="radio" name="cd" id="Decrescente" value="Descrescente">
+                    <input type="radio" name="cd" id="Decrescente" value="Decrescente">
                     <label for="Decrescente"><i>&#xF119;</i>Decrescente</label>
                 </div>
                 <div class="botoes_final">
@@ -54,3 +54,7 @@
 </body>
 
 </html>
+
+<!-- 02 18 20 30 31 32 44 52 65 72 73 78 89 92
+
+35 51 -->
