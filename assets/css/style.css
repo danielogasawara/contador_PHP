@@ -190,6 +190,6 @@ h2 {
 .botao_php {
     margin-top: 20px;
 }
-.resultado span {
+.resultado #erro {
     grid-column: 1/5;
 }

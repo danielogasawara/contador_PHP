@@ -38,7 +38,7 @@
                                 echo '<span>< ' . $i . ' ></span>';
                             }
                         } else {
-                            echo '<span><strong>Erro: Número Inválido</strong></span>';
+                            echo '<span id="erro"><strong>Erro: Número Inválido</strong></span>';
                         }
                         break;
                     case 'Decrescente':
@@ -47,7 +47,7 @@
                                 echo '<span>< ' . $i . ' ></span>';
                             }
                         } else {
-                            echo '<span><strong>Erro: Número Inválido</strong></span>';
+                            echo '<span id="erro"><strong>Erro: Número Inválido</strong></span>';
                         }
                     default:
 
