@@ -26,33 +26,33 @@
             <h2>Resultado</h2>
             <div class="resultado">
                 <?php
-                    $num1 = $_POST['numero1'];
-                    $num2 = $_POST['numero2'];
-                    $tipo = $_POST['np'];
-                    $ladeira = $_POST['cd'];
-                
-                    switch ($ladeira) {
-                        case 'Crescente':
-                            if ($num1 <= $num2) {
-                                for ($i = $num1; $i <= $num2; $i++) {
-                                    echo '<span>< '.$i.' ></span>';
-                                }
-                            } else {
-                                echo 'Erro: Número Inválido';
+                $num1 = $_POST['numero1'];
+                $num2 = $_POST['numero2'];
+                $tipo = $_POST['np'];
+                $ladeira = $_POST['cd'];
+
+                switch ($ladeira) {
+                    case 'Crescente':
+                        if ($num1 <= $num2) {
+                            for ($i = $num1; $i <= $num2; $i++) {
+                                echo '<span>< ' . $i . ' ></span>';
                             }
-                            break;
-                        case 'Decrescente':
-                            if ($num1 >= $num2) {
-                                for ($i = $num1; $i >= $num2; $i--) {
-                                    echo '<span>< '.$i.' ></span>';
-                                }
-                            } else {
-                                echo 'Erro: Número Inválido';
+                        } else {
+                            echo '<span><strong>Erro: Número Inválido</strong></span>';
+                        }
+                        break;
+                    case 'Decrescente':
+                        if ($num1 >= $num2) {
+                            for ($i = $num1; $i >= $num2; $i--) {
+                                echo '<span>< ' . $i . ' ></span>';
                             }
-                        default:
-                
-                            break;
-                    }
+                        } else {
+                            echo '<span><strong>Erro: Número Inválido</strong></span>';
+                        }
+                    default:
+
+                        break;
+                }
                 ?>
             </div>
             <a href="./index.html"><button class="botao_php" type="button">Voltar ao Inicio</button></a>

@@ -187,11 +187,9 @@ h2 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 10px;
 }
-.resultado p {
-    user-select: none;
-    display: inline;
-    margin: 0 10px;
-}
 .botao_php {
     margin-top: 20px;
+}
+.resultado span {
+    grid-column: 1/5;
 }

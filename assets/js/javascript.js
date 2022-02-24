@@ -46,4 +46,4 @@ function surpresa() {
         easterEgg = 0;
     }
 }
-   
+// Verde + Vermelho + Amarelo
